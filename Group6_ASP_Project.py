@@ -61,7 +61,7 @@ class CountryVisitors:
     plt.savefig("Top_3_Countries.jpg")
     plt.show()
 
-    df1 = df[["United Kingdom", "Germany", "France"]]
+    df1 = df[["United Kingdom", "Germany", "Netherlands"]]
 
     total = round(df1.values.sum(), 0)
     print("The total no. of visitors for the top 3 countries is", total)
