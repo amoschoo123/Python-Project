@@ -18,6 +18,11 @@ class CountryVisitors:
     dft = df['Periods'].str.split(' ', n=1, expand=True)
     dft.head()
     print(dft.head(120))
+    df.insert(0, 'Year', dft[0].to_list(), True)
+    df['Year'] = df['Year'].astype(int)
+    df = df[df.Year >= 1978]
+    df = df[df.Year <= 1987]
+    print(df)
 
     countries_list = ['Belgium & Luxembourg', 'Denmark', 'Finland', 'France', 'Germany',
                       'Italy', 'Netherlands', 'Norway', 'Rep Of Ireland',
